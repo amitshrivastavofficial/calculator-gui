@@ -42,6 +42,40 @@ def total():
 	display.insert(END,'Spring Roll :-'+food12.get()+'\n')
 	display.insert(END,'\t'+'        Thankyou'+'\n')
 
+def reset():
+
+	firstname.set(" ")
+	middlename.set(" ")
+	lastname.set(" ")
+	phoneno.set(" ")
+	alterno.set(" ")
+	email.set(" ")
+	add1.set(" ")
+	add2.set(" ")
+	add3.set(" ")
+	add4.set(" ")
+	pin.set(" ")
+	country.set(" ")
+	id.set(" ")
+	payment.set(" ")
+
+	food1.set(0) 
+	food2.set(0) 
+	food3.set(0) 
+	food4.set(0) 
+	food5.set(0) 
+	food6.set(0) 
+	food7.set(0) 
+	food8.set(0) 
+	food9.set(0) 
+	food10.set(0) 
+	food11.set(0) 
+	food12.set(0)
+	totalx.set(0)
+	togo.set(random.randint(1569, 999999))
+	coupon.set(random.randint(1569565, 99999999999))
+
+
 root = Tk()
 root.title("your bill")
 root.geometry("1890x900+0+0")
@@ -137,7 +171,8 @@ dt= Label(ab1,textvariable=Date1,font=('monospace',20,'bold'),width=30,pady=9,bd
 dt1= Label(ab1,text="THE HACKER'S CAFE",font=('FontAwesome',45,'bold'),width=20,pady=9,bd=5,bg="black",fg="red").grid(row=0, column=1,columnspan=2)
 dt2= Label(ab1,textvariable=Time1,font=('monospace',20,'bold'),width=30,pady=9,bd=5,bg="black",fg="green").grid(row=0, column=3)
 
-total=Button(ab6,text="TOTAL",font=('FontAwesome',25,'bold'),command=total,width=20,height=2,pady=9,bd=5,bg="yellow",fg="red").grid(row=0, column=0)
+total=Button(ab6,text="TOTAL",font=('FontAwesome',25,'bold'),command=total,width=10,height=2,pady=9,bd=5,bg="yellow",fg="red").grid(row=0, column=0)
+reset=Button(ab6,text="RESET",font=('FontAwesome',25,'bold'),command=reset,width=10,height=2,pady=9,bd=5,bg="yellow",fg="red").grid(row=0, column=1)
 
 display=Text(ab5,width=35,height=20,pady=7,bd=3,font=('monospace',20,'bold'))
 display.grid(row=0,column=0)
@@ -145,59 +180,59 @@ display.grid(row=0,column=0)
 info0=Label(ab2,font=('FontAwesome',35,'bold'),bg="black",fg="green",text="Customer Information").grid(row=0,column=0,columnspan=2)
 
 info1=Label(ab2,font=('monospace',20,'bold'),text="first Name :- ",bg="black",fg="green").grid(row=1,column=0)
-info_det1=Entry(ab2,textvariable=firstname,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det1=Entry(ab2,textvariable=firstname,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det1.grid(row=1,column=1)
 
 info2=Label(ab2,font=('monospace',20,'bold'),text="middle Name :- ",bg="black",fg="green").grid(row=2,column=0)
-info_det2=Entry(ab2,textvariable=middlename,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det2=Entry(ab2,textvariable=middlename,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det2.grid(row=2,column=1)
 
 info3=Label(ab2,font=('monospace',20,'bold'),text="last Name :- ",bg="black",fg="green").grid(row=3,column=0)
-info_det3=Entry(ab2,textvariable=lastname,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det3=Entry(ab2,textvariable=lastname,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det3.grid(row=3,column=1)
 
 info4=Label(ab2,font=('monospace',20,'bold'),text="Phone No. :- ",bg="black",fg="green").grid(row=4,column=0)
-info_det4=Entry(ab2,textvariable=phoneno,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det4=Entry(ab2,textvariable=phoneno,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det4.grid(row=4,column=1)
 
 info5=Label(ab2,font=('monospace',20,'bold'),text="Alternet No. :- ",bg="black",fg="green").grid(row=5,column=0)
-info_det5=Entry(ab2,textvariable=alterno,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det5=Entry(ab2,textvariable=alterno,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det5.grid(row=5,column=1)
 
 info6=Label(ab2,font=('monospace',20,'bold'),text="Email id :- ",bg="black",fg="green").grid(row=6,column=0)
-info_det6=Entry(ab2,textvariable=email,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det6=Entry(ab2,textvariable=email,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det6.grid(row=6,column=1)
 
 info7=Label(ab2,font=('monospace',20,'bold'),text="Address line 1 :- ",bg="black",fg="green").grid(row=7,column=0)
-info_det7=Entry(ab2,textvariable=add1,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det7=Entry(ab2,textvariable=add1,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det7.grid(row=7,column=1)
 
 info8=Label(ab2,font=('monospace',20,'bold'),text="Address line 2:- ",bg="black",fg="green").grid(row=8,column=0)
-info_det8=Entry(ab2,textvariable=add2,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det8=Entry(ab2,textvariable=add2,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det8.grid(row=8,column=1)
 
 info9=Label(ab2,font=('monospace',20,'bold'),text="Address line 3:- ",bg="black",fg="green").grid(row=9,column=0)
-info_det9=Entry(ab2,textvariable=add3,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det9=Entry(ab2,textvariable=add3,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det9.grid(row=9,column=1)
 
 info10=Label(ab2,font=('monospace',20,'bold'),text="Address line 4 :- ",bg="black",fg="green").grid(row=10,column=0)
-info_det10=Entry(ab2,textvariable=add4,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det10=Entry(ab2,textvariable=add4,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det10.grid(row=10,column=1)
 
 info11=Label(ab2,font=('monospace',20,'bold'),text="PIN :- ",bg="black",fg="green").grid(row=11,column=0)
-info_det11=Entry(ab2,textvariable=pin,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det11=Entry(ab2,textvariable=pin,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det11.grid(row=11,column=1)
 
 info12=Label(ab2,font=('monospace',20,'bold'),text="Country :- ",bg="black",fg="green").grid(row=12,column=0)
-info_det12=Entry(ab2,textvariable=country,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det12=Entry(ab2,textvariable=country,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det12.grid(row=12,column=1)
 
 info13=Label(ab2,font=('monospace',20,'bold'),text="ID Proof :- ",bg="black",fg="green").grid(row=13,column=0)
-info_det13=Entry(ab2,textvariable=id,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det13=Entry(ab2,textvariable=id,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det13.grid(row=13,column=1)
 
 info14=Label(ab2,font=('monospace',20,'bold'),text="Payment by :- ",bg="black",fg="green").grid(row=14,column=0)
-info_det14=Entry(ab2,textvariable=payment,font=('FontAwesome',30,'bold'),width=10,bg="orange",fg="black")
+info_det14=Entry(ab2,textvariable=payment,font=('FontAwesome',30),width=11,bg="orange",fg="black")
 info_det14.grid(row=14,column=1)
 
 info15=Label(ab2,font=('monospace',20,'bold'),text="Order No. :- ",bg="black",fg="green").grid(row=15,column=0)
@@ -270,7 +305,7 @@ ord_det15=Label(ab3,font=('FontAwesome',20,'bold'),text="2.5%",width=15,bg="blac
 ord_det15.grid(row=15,column=1)
 
 ord16=Label(ab3,font=('monospace',20,'bold'),text="Total ",bg="black",fg="green").grid(row=16,column=0)
-ord_det16=Entry(ab3,textvariable=totalx,font=('FontAwesome',30,'bold'),width=10,bg="white",fg="black")
+ord_det16=Label(ab3,textvariable=totalx,font=('FontAwesome',30,'bold'),width=10,bg="white",fg="black")
 ord_det16.grid(row=16,column=1)
 
 root.mainloop()
